@@ -23,3 +23,11 @@ for (let i = 0; i < btnOpenModel.length; i++) {
 
 btnCloseModel.addEventListener('click', closeModel);
 overlay.addEventListener('click', closeModel);
+
+// Esc Button
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !model.classList.contains('hidden')) {
+    closeModel();
+  }
+});
